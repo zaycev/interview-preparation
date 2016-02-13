@@ -20,9 +20,11 @@ lib64/
 parts/
 sdist/
 var/
+venv/
 *.egg-info/
 .installed.cfg
 *.egg
+*.DS_Store
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -60,3 +62,7 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
