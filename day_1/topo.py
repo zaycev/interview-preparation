@@ -40,32 +40,32 @@ class Graph(object):
     def itertopological(self):
 
         # Take all edges and find nodes with incoming degree
-        # equal to 0 (origins). Connect them with "Super Origin".
-        origins = set(self.__nodes.keys())
+        # equal to 0 (sources). Connect them with "Super source".
+        sources = set(self.__nodes.keys())
         for node_1_id, node_2_id in self.__edges:
-            if node_2_id in origins:
-                origins.remove(node_2_id)
+            if node_2_id in sources:
+                sources.remove(node_2_id)
 
-        s_origin = self.create_node("S")
-        for origin_id in origins:
-            origin = self.__nodes[origin_id]
-            self.create_edge(s_origin, origin)
+        s_source = self.create_node("S")
+        for source_id in sources:
+            source = self.__nodes[source_id]
+            self.create_edge(s_source, source)
 
-        # Start DFS from super origin and populate visited list
+        # Start DFS from super source and populate visited list
         # every time we exit from a node.
         topological_list = []
         visited = set()
-        self.__topological_dfs(s_origin.id, visited, topological_list)
+        self.__topological_dfs(s_source.id, visited, topological_list)
 
-        # Assert that super origin is in the end of 
+        # Assert that super source is in the end of 
         # the topological list.
-        assert topological_list[-1] == s_origin.id
+        assert topological_list[-1] == s_source.id
 
-        # Remove super origin from the graph.
-        for origin_id in origins:
-            self.__edges.remove((s_origin.id, origin_id))
-        del self.__adjacent[s_origin.id]
-        del self.__nodes[s_origin.id]
+        # Remove super source from the graph.
+        for source_id in sources:
+            self.__edges.remove((s_source.id, source_id))
+        del self.__adjacent[s_source.id]
+        del self.__nodes[s_source.id]
 
         # Return topological list in a reversed order
         # without the first element.
