@@ -1,4 +1,4 @@
-# Questions
+# DBMS/NoSQL/Scalability Questions
 
 * Read/Write ratio ­ Think about that.
     * How many reads compared to writes. For eg: Twitter has >100:1 ­ Random
