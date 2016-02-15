@@ -1,4 +1,6 @@
-# DBMS/NoSQL/Scalability Questions
+# Questions
+
+> DBMS, NoSQL, Scalability
 
 * Read/Write ratio ­ Think about that.
     * How many reads compared to writes. For eg: Twitter has >100:1 ­ Random
@@ -38,3 +40,9 @@ shard.
 
 
 *ASYNC EVERYWHERE, CACHES, SHARDING and CDN*
+
+#### References
+
+* [1] Scaling Uber's Real-time Market Platform. [www.infoq.com](http://www.infoq.com/presentations/uber-market-platform)
+* [2] How Uber Scales Their Real-Time Market Platform. [highscalability.com](http://highscalability.com/blog/2015/9/14/how-uber-scales-their-real-time-market-platform.html)
+* [3] How We've Scaled Dropbox. [www.youtube.com](https://www.youtube.com/watch?v=PE4gwstWhmc)
