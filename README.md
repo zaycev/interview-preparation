@@ -9,7 +9,7 @@
 4. [Day 4](./day_4) – hashing: hyper-log-log.
 5. [Day 5](./day_5) - dynamic programming, longest sustring, spell checker, word breaker.
 6. [Day 6](./day_6) – simple practical project.
-7. [Questions](./questions.md) - questions on Map-Reduce, DBMS, NoSQL and Scalability topics.
+7. [Questions](./QUESTIONS.md) - questions on Map-Reduce, DBMS, NoSQL and Scalability topics.
 8. [Puzzles](./puzzles) – puzzles.
 
 All code and solutions can be used on practice. At the same time, do not expect that they are very optimized.
