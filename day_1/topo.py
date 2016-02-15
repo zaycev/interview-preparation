@@ -113,7 +113,7 @@ class Graph(object):
 
 def test():
 
-    g = TopologicalGraph()
+    g = Graph()
 
     a = g.create_node("a")
     b = g.create_node("b")
@@ -121,17 +121,18 @@ def test():
     d = g.create_node("d")
     e = g.create_node("e")
 
-    g.add_edge(a, b)
-    g.add_edge(a, c)
-    g.add_edge(a, d)
-    g.add_edge(a, e)
+    g.create_edge(a, b)
+    g.create_edge(a, c)
+    g.create_edge(a, d)
+    g.create_edge(a, e)
 
-    g.add_edge(b, d)
-    g.add_edge(c, d)
-    g.add_edge(c, e)
-    g.add_edge(d, e)
+    g.create_edge(b, d)
+    g.create_edge(c, d)
+    g.create_edge(c, e)
+    g.create_edge(d, e)
 
-    g.topological(lambda node: sys.stdout.write(node.data+"\n"))
+    for node in g.itertopological():
+        print node
 
     return 0
 
