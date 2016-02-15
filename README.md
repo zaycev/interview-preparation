@@ -2,7 +2,7 @@
 
 #### Problems
 
-0. [Day 0](./warmup) - binary search, merge sort, quick sort.
+0. [Day 0](./warmup) - warm up: binary search, merge sort, quick sort.
 1. [Day 1](./day_1) – basic graph theory, dfs, topological sort, alien alphabet.
 2. [Day 2](./day_2) – bfs, dijkstra, a-star.
 3. [Day 3](./day_3) – balanced trees, avl tree.
@@ -14,7 +14,7 @@
 
 > Solutions can be used on practice, but not very optimized.
 
-#### Authors
+#### Contributors
 * Vladimir Zaytsev <zaytsev@usc.edu>
 
 #### License
