@@ -1,8 +1,7 @@
 ## My Preparation for Coding Interview
 
-### Content
-
 #### Problems
+
 0. [Day 0](./warmup) - binary search, merge sort, quick sort.
 1. [Day 1](./day_1) – basic graph theory, dfs, topological sort, alien alphabet.
 2. [Day 2](./day_2) – bfs, dijkstra, a-star.
