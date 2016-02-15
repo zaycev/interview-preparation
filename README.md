@@ -1,6 +1,6 @@
 # Preparation for Coding Interviews
 
-#### Content
+#### Content:
 
 0. [Day 0](./day_0) - warm up: binary search, merge sort, quick sort.
 1. [Day 1](./day_1) – basic graph theory: dfs, topological sort, alien alphabet.
@@ -12,12 +12,13 @@
 7. [Questions](./questions.md) - questions on Map-Reduce, DBMS, NoSQL and Scalability topics.
 8. [Puzzles](./puzzles) – puzzles.
 
-> Solutions can be used on practice, but not very optimized.
+All code and solutions can be used on practice. At the same time, do not expect that they are very optimized.
 
-#### Contributors
+#### Contributors:
+
 * Vladimir Zaytsev <zaytsev@usc.edu>
 
-#### License
+#### License:
 
 The MIT License (MIT)
 
