@@ -1,4 +1,4 @@
-## My Preparation for Coding Interview
+# Preparation for Coding Interviews
 
 #### Problems
 
@@ -11,3 +11,5 @@
 6. [Day 6](./day_6) – simple practical project.
 7. [Questions](./questions.md) - questions on Map-Reduce, DBMS, NoSQL and Scalability topics.
 8. [Puzzles](./puzzles) – puzzles.
+
+>Code is more or less practical.

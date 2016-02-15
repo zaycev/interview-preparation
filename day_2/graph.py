@@ -12,6 +12,9 @@ class Graph(object):
     def __len__(self):
         return len(self.__nodes)
 
+    def get(self, node):
+        return self.__nodes[node]
+
     def get_adjacent(self, node):
         if node not in self.__nodes:
             raise ValueError("Node is not belong this graph.")
