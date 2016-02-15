@@ -1,5 +1,5 @@
 import sys
-
+import collections
 
 class Graph(object):
 
@@ -55,22 +55,36 @@ class Graph(object):
         self.__dfs_util(node, lambda n: dfs_list.append(n), set())
         return dfs_list.__iter__()
 
+    def iterbfs(self, node):
+        bfs_list = []
+        self.__bfs_util(node, lambda n: bfs_list.append(n))
+        return bfs_list.__iter__()
+
     def __dfs_util(self, node, apply_func, visited):
         if node in visited:
             return
         apply_func(node)
         visited.add(node)
-        for adj_nodd in self.__adjacent[node]:
-            self.__dfs_util(adj_nodd, apply_func, visited)
+        for adj_node in self.__adjacent[node]:
+            self.__dfs_util(adj_node, apply_func, visited)
 
-
+    def __bfs_util(self, node, apply_func):
+        visited = {node}
+        queue = collections.deque([node])
+        while len(queue) > 0:
+            cur_node = queue.popleft()
+            apply_func(cur_node)
+            for adj_node in self.__adjacent[cur_node]:
+                if adj_node not in visited:
+                    queue.append(adj_node)
+                    visited.add(adj_node)
 
 def test():
 
 
     g = Graph()
 
-    nodes = [1,2,3,4,5]
+    nodes = [1,2,3,4,5,6]
     for node in nodes:
         g.add_node(node)
 
@@ -78,20 +92,34 @@ def test():
         print node
     print
 
+    for node in g.iterbfs(1):
+        print node
+    print
+
     for node in g.iternodes():
         print node
+    print
 
     g.add_edge(1, 2, 1.0)
     g.add_edge(2, 3, 1.0)
     g.add_edge(3, 4, 1.0)
     g.add_edge(4, 5, 1.0)
+    g.add_edge(2, 6, 1.0)
 
+    print "DFS traversal:"
     for node in g.iterdfs(1):
         print node
     print
 
+    print "BFS traversal:"
+    for node in g.iterbfs(1):
+        print node
+    print
+
+    print "Edges:"
     for e, w in g.iteredges():
         print e, w
+    print
 
     return 0
 
