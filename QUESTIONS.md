@@ -48,3 +48,4 @@ shard.
 * [3] How We've Scaled Dropbox. [www.youtube.com](https://www.youtube.com/watch?v=PE4gwstWhmc)
 * [4] Scaling Uber [www.infoq.com](http://www.infoq.com/presentations/uber-scalability-arch)
 * [5] Stream Processing in Uber [www.infoq.com](http://www.infoq.com/presentations/uber-stream-processing)
+* [6] Spark and Spark Streaming at Uber [www.youtube.com](https://www.youtube.com/watch?v=zKbds9ZPjLE&t=748)
