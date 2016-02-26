@@ -2,18 +2,16 @@
 
 > DBMS, Scalability, Data
 
-* Read/Write ratio ­ Think about that.
+* Read/Write ratio ­ Think about that:
   
-  * How many reads compared to writes. For eg: Twitter has >100:1 ­ Random
-    
-    seeks will be expensive! Distributed memcache? [with today’s tweets]?
+  * How many reads compared to writes. For eg: Twitter has >100:1 ­ Random seeks will be expensive! Distributed memcache? [with today’s tweets]?
   
 * ACID requirements
   
-  * Atomicity ­ Transactions are either completed on success or reverted on failure
-  * Consistency ­ state is valid once transaction is over.
-  * Isolation ­ Only one transaction can run at a time
-  * Durability ­ Failover. State is maintained even in case of failover
+  * Atomicity ­ Transactions are either completed on success or reverted on failure.
+  * Consistency – state is valid once transaction is over.
+  * Isolation ­– only one transaction can run at a time.
+  * Durability Failover – State is maintained even in case of failover.
   
 * Memcache v/s Redis?
   
@@ -28,9 +26,7 @@
     
   * Indexes are fast and small over each shard.
     
-  * Complex and single failure if there is no custom replication done of each
-    
-    shard.
+  * Complex and single failure if there is no custom replication done of each shard.
   
 * Maintenance is hard
   
@@ -42,9 +38,9 @@
   
 * Pub/Sub channel. Topic based, content based.
   
-* Throttling ­ Queues (worker service throttling)
+* Throttling Queues (worker service throttling).
   
-* Flighting and A/B testing (Router based) ­ Deployment to a cluster and traffic manager handles that or Feature switch based. Out of band config deployment.
+* Flighting and A/B testing (Router based). Deployment to a cluster and traffic manager handles that or Feature switch based. Out of band config deployment.
   
 * CAP theorem ­ Consistency, Availability and Partition tolerance ­ chose 2.
 
@@ -57,3 +53,4 @@
 * [3] How We've Scaled Dropbox. [www.youtube.com](https://www.youtube.com/watch?v=PE4gwstWhmc)
 * [4] Scaling Uber [www.infoq.com](http://www.infoq.com/presentations/uber-scalability-arch)
 * [5] Stream Processing in Uber [www.infoq.com](http://www.infoq.com/presentations/uber-stream-processing)
+* [6] Spark and Spark Streaming at Uber [www.youtube.com](https://www.youtube.com/watch?v=zKbds9ZPjLE&t=748)
