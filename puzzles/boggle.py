@@ -3,7 +3,7 @@
 #                       {'U','E','K'},
 #                       {'Q','S','E'}};
 #      isWord(dictionary, boggle, str): returns true if str is present in dictionary else false.
-#                   
+#
 #
 #Output:  Following words of dictionary are present
 #         GEEKS
@@ -28,9 +28,9 @@ lookup O(1)
 canMove(position, ch)
 
 """
-    
+
 class Solver(object):
-    
+
     def __init__(self, dict_list, boggle):
         self.dict = set(dict_list)
         self.boggle = boggle
@@ -43,12 +43,12 @@ class Solver(object):
                 if ch not in self.pos:
                     self.pos[ch] = [(i, j)]
                 else:
-                    self.pos[ch].append((i, j))                
-        
+                    self.pos[ch].append((i, j))
+
     def insert_if_exist(self, boggle, i, j, to_array):
         if i >= 0 and i < len(boggle) and j >= 0 and j < len(boggle[i]):
             to_array.append((i, j))
-    
+
     def get_adj(self, boggle, i, j):
         adj = []
         self.insert_if_exist(boggle, i - 1, j - 1, adj)
@@ -60,7 +60,7 @@ class Solver(object):
         self.insert_if_exist(boggle, i + 1, j, adj)
         self.insert_if_exist(boggle, i + 1, j + 1, adj)
         return adj
-    
+
     def is_word(self, string):
         if len(string) == 0:
             return False
@@ -73,10 +73,10 @@ class Solver(object):
             if self.__is_word(s_position, 0, string):
                 return True
         return False
-    
+
     def __is_word(self, pos, i, string):
         if i == len(string) - 1:
-            return True    
+            return True
         # adjs = self.adj[pos]
         # x0, y0 = pos
         for x, y in self.get_adj(self.boggle, pos[0], pos[1]): #adjs:
@@ -85,10 +85,10 @@ class Solver(object):
                 if result:
                     return True
         return False
-    
-    
+
+
 if __name__ == "__main__":
-    
+
     d = ["GEEKS", "FOR", "QUIZ", "GO"]
     b = [
             ['G','I','Z'],
@@ -97,11 +97,11 @@ if __name__ == "__main__":
         ]
 
     s = Solver(d, b)
-    
+
     print s.is_word("GEEKS")
     print s.is_word("SEEKS")
     print s.is_word("FOR")
     print s.is_word("GEEK")
     print s.is_word("QUIZ")
 
-# http://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/
+# Another solution: http://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/

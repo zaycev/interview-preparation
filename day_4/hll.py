@@ -41,16 +41,18 @@ class FMCounter(object):
 
     # Possible hash functions.
     HASHERS = {
-        32  : pyhash.murmur1_32,
-        64  : pyhash.murmur2_x86_64b,
+        32 : pyhash.murmur1_32,
+        64 : pyhash.murmur2_x86_64b,
         128 : pyhash.murmur3_x86_128,
     }
 
     def __init__(self, n_hash_bins=7, n_hash_bin_size=16, hash_size=32):
         """
         Args:
-            n_hash_bins: A number of hash bins. We will take a median of average R in each bean.
-            n_hash_bin_size: A size of each has bin. Should be ~ log_2(number of unique elements)
+            n_hash_bins: A number of hash bins. We will take a median of average
+                         R in each bean.
+            n_hash_bin_size: A size of each has bin. Should be ~ log_2 (number
+                         of unique elements)
             hash_size: Size of hash function (number of bits it returns).
         """
         if hash_size not in self.HASHERS:
