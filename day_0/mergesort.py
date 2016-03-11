@@ -24,14 +24,14 @@ def merge_sort_util(array, temp, i_b, i_e):
         if array[i_b] > array[i_e]:
             array[i_b], array[i_e] = array[i_e], array[i_b]
         return
-    
+
     # Partition array using mid index.
     mid = i_b + (i_e - i_b) / 2
 
     # Sort partitions.
     merge_sort_util(array, temp, i_b, mid)
     merge_sort_util(array, temp, mid, i_e)
-    
+
     i, j, k = i_b, mid, 0
 
     # Merge sorted arrays using temp array.
@@ -62,7 +62,7 @@ def merge_sort_util(array, temp, i_b, i_e):
 def test():
     import random
     for _ in xrange(100):
-        size = random.randint(0, 10000)
+        size = random.randint(0, 100000)
         array = range(size)
         array_copy = array[:]
         random.shuffle(array_copy)
@@ -72,5 +72,3 @@ def test():
 
 if __name__ == '__main__':
     sys.exit(test())
-
-
